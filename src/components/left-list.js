@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Data from './data';
 
 class LeftList extends Component {
     constructor(props) {
@@ -28,6 +29,10 @@ class LeftList extends Component {
             },
             section_style: {
                 backgroundColor: 'white',
+                height: '200px',
+                overflow:'auto',
+                padding: 0,
+                margin: 0,
             }
         }
     }
@@ -38,7 +43,9 @@ class LeftList extends Component {
             <div className="list" style={this.state.list_style}>
                 <div id="image" style={this.state.list_div_style}>
                     <div className="lab" style={this.state.lab_style}>IMAGES</div>
-                    <section id="image_list" style={this.state.section_style}>list</section>
+                    <section id="image_list" style={this.state.section_style}>
+                        <Data/>
+                    </section>
                 </div>
                 <div id="data" style={this.state.list_div_style}>
                     <div className="lab" style={this.state.lab_style}>OCR DATA</div>
