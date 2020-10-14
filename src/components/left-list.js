@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Data from './data';
+import DataList from './data';
 
 class LeftList extends Component {
     constructor(props) {
@@ -44,7 +44,7 @@ class LeftList extends Component {
                 <div id="image" style={this.state.list_div_style}>
                     <div className="lab" style={this.state.lab_style}>IMAGES</div>
                     <section id="image_list" style={this.state.section_style}>
-                        <Data/>
+                        <DataList/>
                     </section>
                 </div>
                 <div id="data" style={this.state.list_div_style}>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import data from "./data.json";
 
-function HandleClick(){
-    console.log("click");
+function HandleClick(data_id){
+    console.log("click  " + data_id);
+    return data_id;
 }
 
 const list_style = {
@@ -27,10 +28,9 @@ const btn_style = {
 }
 
 const dataObject = data.map((data, i) => {
-
     return (
         <div style={div_style}>
-            <button style={btn_style} onClick={HandleClick}>
+            <button style={btn_style} onClick={() => { HandleClick(data.id) }}>
                 <li style={list_style} key={i}>
                     {data.title}
                 </li>
@@ -39,11 +39,25 @@ const dataObject = data.map((data, i) => {
     );
 });
 
-class Data extends Component {
+class DataList extends Component {
 
     render() {
         return (dataObject);
     }
 }
 
-export default Data;
+class OriginalImage extends Component {
+    render() {
+        return("original image");
+    }
+}
+
+class ExtractImage extends Component {
+    render() {
+        return("extract image");
+    }
+}
+
+export default DataList;
+
+// export default {DataList, OriginalImage, ExtractImage};
