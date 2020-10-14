@@ -3,7 +3,18 @@ import data from "./data.json";
 
 function HandleClick(data_id){
     console.log("click  " + data_id);
-    return data_id;
+    let cur_data = data.filter((data_id) => {
+        return data.id === data_id;
+    });
+
+    let t_cur_data = cur_data.map((data_id) => {
+        return cur_data.original;
+    })
+    console.log(cur_data);
+    console.log(t_cur_data);
+    
+    //let cur_data = data.filter(data => {data.id===data_id});
+    //console.log("click  " + cur_data);
 }
 
 const list_style = {
@@ -39,6 +50,8 @@ const dataObject = data.map((data, i) => {
     );
 });
 
+
+
 class DataList extends Component {
 
     render() {
@@ -46,17 +59,17 @@ class DataList extends Component {
     }
 }
 
-class OriginalImage extends Component {
-    render() {
-        return("original image");
-    }
-}
+// class OriginalImage extends Component {
+//     render() {
+//         return("original image");
+//     }
+// }
 
-class ExtractImage extends Component {
-    render() {
-        return("extract image");
-    }
-}
+// class ExtractImage extends Component {
+//     render() {
+//         return("extract image");
+//     }
+// }
 
 export default DataList;
 
