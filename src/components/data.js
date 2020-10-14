@@ -2,20 +2,15 @@ import React, { Component } from 'react';
 import data from "./data.json";
 
 function HandleClick(data_id){
-    console.log("click  " + data_id);
-    let cur_data = data.filter((data_id) => {
-        return data.id === data_id;
-    });
+    console.log(data_id);
 
-    let t_cur_data = cur_data.map((data_id) => {
-        return cur_data.original;
-    })
-    console.log(cur_data);
-    console.log(t_cur_data);
-    
-    //let cur_data = data.filter(data => {data.id===data_id});
-    //console.log("click  " + cur_data);
+    let cur_data = data.map((data_id) => {
+        return data_id.original;
+    });
+    console.log(cur_data[data_id-1]);
 }
+
+
 
 const list_style = {
     margin: '0',
@@ -72,5 +67,3 @@ class DataList extends Component {
 // }
 
 export default DataList;
-
-// export default {DataList, OriginalImage, ExtractImage};
