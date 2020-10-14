@@ -1,4 +1,8 @@
 
+*{
+  font-family: sans-serif;
+}
+
 body{
   background-color: #F2F5F9;
 }
@@ -21,9 +25,12 @@ body{
 
 .nav{
   grid-area: nav;
+  margin-left: 10px;
+  margin-top: 10px;
 }
-.nav li:hover{
-  color: white;
+
+.nav button:hover{
+  background: blueviolet;
 }
 
 .list{

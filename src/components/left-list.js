@@ -11,14 +11,14 @@ class LeftList extends Component {
                 flexDirection: 'column',
                 margin: 0,
             },
-            list_div_style:{
+            list_div_style: {
                 border: '1px',
                 borderRadius: '9px',
                 backgroundColor: 'white',
                 padding: '16px',
                 margin: '10px',
             },
-            lab_style:{
+            lab_style: {
                 fontSize: '12px',
                 fontWeight: 700,
                 color: '#00338d',
@@ -26,7 +26,7 @@ class LeftList extends Component {
                 marginBottom: '5px',
                 backgroundColor: 'white'
             },
-            section_style:{
+            section_style: {
                 backgroundColor: 'white',
             }
         }
