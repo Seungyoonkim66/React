@@ -13,8 +13,13 @@ function HandleClick(data_id) {
         return data_id.extract;
     });
 
+    let cur_data_extract_data = data.map((data_id) => {
+        return data_id.extract_data;
+    });
+
     console.log(cur_data_original[data_id - 1]);
     console.log(cur_data_extract[data_id - 1]);
+    console.log(cur_data_extract_data[data_id - 1]);
 
     const original_image_render_data = (
         <div>
@@ -28,8 +33,44 @@ function HandleClick(data_id) {
         </div>
     );
 
+    const extract_data_render_data = (
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th scop="cols">추출 항목</th>
+                        <th scop="cols">추출 값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">총금액</th>
+                        <td>{cur_data_extract_data[data_id - 1].총금액}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">지급기일</th>
+                        <td>{cur_data_extract_data[data_id - 1].지급기일}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">지급처</th>
+                        <td>{cur_data_extract_data[data_id - 1].지급처}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">전기일자</th>
+                        <td>{cur_data_extract_data[data_id - 1].전기일자}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">증빙일자</th>
+                        <td>{cur_data_extract_data[data_id - 1].증빙일자}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    );
+
     ReactDOM.render(original_image_render_data, document.getElementById('oiginal_image_render_div'));
     ReactDOM.render(extract_image_render_data, document.getElementById('extract_image_render_div'));
+    ReactDOM.render(extract_data_render_data, document.getElementById('extract_data_render_div'));
 }
 
 

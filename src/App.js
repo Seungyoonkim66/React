@@ -40,7 +40,7 @@ class App extends Component {
             </div>
             <div className="contents_div">
               <div className="label">OCR DATA</div>
-              <div className="ocr_data" id="ocr_data_render_div"></div>
+              <div className="extract_data" id="extract_data_render_div" style={{ overflow: 'auto', height: '250px' }}></div>
             </div>
           </div>
           <OriginalImage/>
