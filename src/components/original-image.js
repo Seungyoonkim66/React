@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import tempimg from './static/original/회계전표_국내청구서_1.png';
 
 class OriginalImage extends Component {
     constructor(props) {
@@ -31,6 +32,9 @@ class OriginalImage extends Component {
         return (
             <div className="original" style={this.state.list_div_style}>
                 <div className="lab" style={this.state.lab_style}>ORIGINAL IMAGES</div>
+                <div className="original_img">
+                    {/* <img style={{width:"300px"}} src={tempimg} alt="original image"/> */}
+                </div>
             </div>
         );
     }

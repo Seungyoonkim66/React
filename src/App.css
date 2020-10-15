@@ -29,9 +29,6 @@ body{
   margin-top: 10px;
 }
 
-.nav button:hover{
-  background: blueviolet;
-}
 
 .list{
   grid-area: list;
