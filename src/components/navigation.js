@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Tab extends Component {
     constructor(props) {
         super(props);
-        console.log('Tab-constructor');
+        // console.log('Tab-constructor');
         this.state = {
             clicked: false,
             //hovered: false,
@@ -112,7 +112,7 @@ class Tab extends Component {
     }
 
     render() {
-        console.log('Tab-render');
+        // console.log('Tab-render');
         return (
             <div>
                 <span style={this.state.span_style}>
@@ -132,7 +132,7 @@ class Tab extends Component {
 class Navigation extends Component {
     constructor(props) {
         super(props);
-        console.log('Naviation-constructor');
+        // console.log('Naviation-constructor');
         this.state = {
             TabData: [
                 {
@@ -152,7 +152,7 @@ class Navigation extends Component {
     }
 
     render() {
-        console.log('Navigation-render')
+        // console.log('Navigation-render')
         const mapToComponent = data => {
             return data.map((tab, i) => {
                 return (<Tab tab={tab} key={i} />);

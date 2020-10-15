@@ -4,7 +4,7 @@ import logo from './KPMG_logo.svg';
 class Header extends Component {
     constructor(props) {
         super(props);
-        console.log('Header-constructor');
+        // console.log('Header-constructor');
         this.state = {
             header_full_style: {
                 backgroundColor: 'white',
@@ -46,7 +46,7 @@ class Header extends Component {
     }
 
     render() {
-        console.log('Header-render');
+        // console.log('Header-render');
         return (
             <div className="header" style={this.state.header_full_style}>
                 <div className="logo">

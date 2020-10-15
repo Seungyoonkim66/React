@@ -9,13 +9,17 @@ body{
 .App {
   margin: 0px;
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1.5fr;
+  /* grid-template-columns: 1fr 1.5fr 1.5fr; */
   grid-template-rows: 40px 40 px auto 40px;
-  grid-template-areas: 
+  /* grid-template-areas: 
   "header header header"
   "nav nav nav"
-  "list original extract"
-  "footer footer footer";
+  "contents original extract"
+  "footer footer footer"; */
+  grid-template-areas: "header"
+                       "nav"
+                       "contents"
+                       "footer";
   grid-gap: 0px;
 }
 
@@ -29,19 +33,37 @@ body{
   margin-top: 10px;
 }
 
-
-.list{
-  grid-area: list;
+.contents{
+  grid-area: contents;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  border: solid;
+  justify-content: space-around;
 }
 
-.original{
-  grid-area: original;
+.contents_div{
+  border: 1px;
+  border-radius: 9px;
+  background-color: white;
+  padding: 16px;
+  margin: 10px;
 }
 
-
-.extract{
-  grid-area: extract;
+.label{
+  color: #00338d;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: white;
 }
+
+.image_list{
+  overflow: 'auto';
+  padding: 0;
+  margin: 0;
+}
+
 
 .footer{
   grid-area: footer;

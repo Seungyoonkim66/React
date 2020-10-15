@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 // import tempimg from './static/original/회계전표_국내청구서_1.png';
+// import DataList from './data';
+// import * as DataFunc from './data';
 
 class OriginalImage extends Component {
     constructor(props) {
@@ -31,7 +33,7 @@ class OriginalImage extends Component {
         console.log('OriginalImage-render');
         return (
             <div className="original" style={this.state.list_div_style}>
-                <div className="lab" style={this.state.lab_style}>ORIGINAL IMAGES</div>
+                <div className="lab" style={this.state.lab_style}>ORIGINAL IMAGE</div>
                 <div className="original_img">
                     {/* <img style={{width:"300px"}} src={tempimg} alt="original image"/> */}
                 </div>
