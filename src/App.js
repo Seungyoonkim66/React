@@ -34,13 +34,13 @@ class App extends Component {
           <div className="left">
             <div className="contents_div">
               <div className="label">IMAGES</div>
-              <section id="image_list" style={{ overflow: 'auto', height: '250px' }}>
+              <section id="image_list" style={{ overflow: 'auto', height: '250px', paddingTop: '10px' }}>
                 <LeftList />
               </section>
             </div>
             <div className="contents_div">
               <div className="label">OCR DATA</div>
-              <div className="extract_data" id="extract_data_render_div" style={{ overflow: 'auto', height: '250px' }}></div>
+              <div className="extract_data" id="extract_data_render_div" style={{ overflow: 'auto', height: '300px' }}></div>
             </div>
           </div>
           <OriginalImage/>

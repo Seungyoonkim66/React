@@ -21,15 +21,20 @@ function HandleClick(data_id) {
     console.log(cur_data_extract[data_id - 1]);
     console.log(cur_data_extract_data[data_id - 1]);
 
+    const img_style = {
+        width: '100%',
+        marginTop: '10px',
+    }
+
     const original_image_render_data = (
         <div>
-            <img style={{ width: '100%' }} src={cur_data_original[data_id - 1]} alt="original_image" />
+            <img style={img_style} src={cur_data_original[data_id - 1]} alt="original_image" />
         </div>
     );
 
     const extract_image_render_data = (
         <div>
-            <img style={{ width: '100%' }} src={cur_data_extract[data_id - 1]} alt="extract_image" />
+            <img style={img_style} src={cur_data_extract[data_id - 1]} alt="extract_image" />
         </div>
     );
 
@@ -79,7 +84,10 @@ class Contents extends Component {
         super(props);
         this.state = {
             list_div_style: {
-                borderBottom: '1px solid #00338d',
+                borderLeft: '3px solid #036',
+                borderBottom: '1px outset #036',
+                marginTop: '4px',
+                marginRight: '10px',
             },
             li_style: {
                 listStyleType: 'none',
@@ -92,12 +100,12 @@ class Contents extends Component {
             }
         }
     }
-
     render() {
         const dataObject = data.map((data, i) => {
             return (
-                <div className="contents_list_div" style={this.state.list_div_style}>
-                    <button style={this.state.btn_style} onClick={() => { HandleClick(data.id) }}>
+                <div style={this.state.list_div_style}>
+                    <button style={this.state.btn_style} 
+                            onClick={() => { HandleClick(data.id) }}>
                         <li style={this.state.li_style} key={i}>
                             {data.title}
                         </li>

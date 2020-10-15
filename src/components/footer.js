@@ -5,9 +5,12 @@ class Footer extends Component {
         super(props);
         this.state = {
             footer_style: {
-                padding: '4px 12px',
+                padding: '20px',
                 backgroundColor: 'white',
-                fontSize: '11px',
+                fontSize: '13px',
+                color: 'gray',
+                height: '100%',
+                marginBottom: 0,
             }
         }
     }
@@ -15,7 +18,8 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer" style={this.state.footer_style}>
-                &copy; copyright
+                <p>&copy; 2020 KPMG Samjong Accounting Corp., a Korea Limited Liability Company and a member firm of the KPMG global organization of independent member firms affiliated with KPMG International Limited, a private English company limited by guarantee. All rights reserved.</p>
+                <p>For more detail about the structure of the KPMG global organization please visit <a href="https://home.kpmg/kr/ko/home.html">https://home.kpmg/governance</a>.</p>
             </div>
         );
     }

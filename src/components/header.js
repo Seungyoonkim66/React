@@ -8,7 +8,9 @@ class Header extends Component {
             header_full_style: {
                 backgroundColor: 'white',
                 margin: 0,
-                padding: 10,
+                paddingTop: 30,
+                paddingLeft: 20,
+                paddingBottom: 15,
                 borderBottom: 'solid',
                 borderImage: 'linear-gradient(to bottom,#00338d 20%,#E5EAF4 80%)',
                 borderImageSlice: 1,
