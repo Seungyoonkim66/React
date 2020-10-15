@@ -4,6 +4,8 @@ import Header from './components/header';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
 import LeftList from './components/left-list';
+import OriginalImage from './components/original-image';
+import ExtractImage from './components/extract-image';
 
 class App extends Component {
   constructor(props) {
@@ -11,14 +13,14 @@ class App extends Component {
     console.log("App-constructor");
     this.state = {
       title: null,
-      label_style:{
+      label_style: {
         fontSize: '12px',
         fontWeight: 700,
         color: '#00338d',
         textTransform: 'uppercase',
         marginBottom: '5px',
         backgroundColor: 'white'
-    },
+      },
     }
   }
 
@@ -29,24 +31,20 @@ class App extends Component {
         <Header />
         <Navigation />
         <div className="contents">
-
-          <div className="contents_div">
-            <div className="label">IMAGES</div>
-            <section id="image_list" style={this.state.section_style}>
-              <LeftList />
-            </section>
+          <div className="left">
+            <div className="contents_div">
+              <div className="label">IMAGES</div>
+              <section id="image_list" style={{ overflow: 'auto', height: '250px' }}>
+                <LeftList />
+              </section>
+            </div>
+            <div className="contents_div">
+              <div className="label">OCR DATA</div>
+              <div className="ocr_data" id="ocr_data_render_div"></div>
+            </div>
           </div>
-
-          <div className="contents_div">
-            <div className="label">ORIGINAL IMAGE</div>
-            <div id="oiginal_image_render_div"></div>
-          </div>
-
-          <div className="contents_div">
-            <div className="label">EXTRACT IMAGE</div>
-            <div className="extract" id="extract_image_render_div"></div>
-          </div>
-
+          <OriginalImage/>
+          <ExtractImage/>
         </div>
         <Footer />
       </div>

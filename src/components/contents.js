@@ -18,13 +18,13 @@ function HandleClick(data_id) {
 
     const original_image_render_data = (
         <div>
-            <img style={{ width: '100px' }} src={cur_data_original[data_id - 1]} alt="original_image" />
+            <img style={{ width: '100%' }} src={cur_data_original[data_id - 1]} alt="original_image" />
         </div>
     );
 
     const extract_image_render_data = (
         <div>
-            <img style={{ width: '100px' }} src={cur_data_extract[data_id - 1]} alt="extract_image" />
+            <img style={{ width: '100%' }} src={cur_data_extract[data_id - 1]} alt="extract_image" />
         </div>
     );
 
@@ -38,10 +38,11 @@ class Contents extends Component {
         super(props);
         this.state = {
             list_div_style: {
-
+                borderBottom: '1px solid #00338d',
             },
             li_style: {
                 listStyleType: 'none',
+                padding: '10px 10px',
             },
             btn_style: {
                 border: 'none',
