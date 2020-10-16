@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import data from "./data.json";
+import clipboard from './clipboard.svg';
+
+function Clipboard () {
+    console.log("clipboard");
+    document.execCommand('copy');
+}
 
 function HandleClick(data_id) {
-    console.log(data_id);
+    console.log("file id:"+data_id);
 
     let cur_data_original = data.map((data_id) => {
         return data_id.original;
@@ -38,6 +44,7 @@ function HandleClick(data_id) {
         </div>
     );
 
+
     const extract_data_render_data = (
         <div>
             <table>
@@ -49,8 +56,11 @@ function HandleClick(data_id) {
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">총금액</th>
-                        <td>{cur_data_extract_data[data_id - 1].총금액}</td>
+                        <th scope="row" id="총금액">총금액</th>
+                        <td>{cur_data_extract_data[data_id - 1].총금액}
+                            <img style={{float: "right", margin: "0 10px"}} width="20px"alt="clipboard" src={clipboard}
+                                onClick={Clipboard}/>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">지급기일</th>
@@ -99,13 +109,20 @@ class Contents extends Component {
                 fontSize: '12px',
             }
         }
+        this.HandleMouseOn=this.HandleMouseOn.bind(this);
     }
+
+    HandleMouseOn(e) {
+        console.log('HandleMouseOn');
+    }
+
     render() {
         const dataObject = data.map((data, i) => {
             return (
                 <div style={this.state.list_div_style}>
                     <button style={this.state.btn_style} 
-                            onClick={() => { HandleClick(data.id) }}>
+                            onClick={() => { HandleClick(data.id) }}
+                            onMouseOver={() => {this.HandleMouseOn()}}>
                         <li style={this.state.li_style} key={i}>
                             {data.title}
                         </li>

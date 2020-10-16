@@ -33,7 +33,7 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: rgba(153, 173, 209, 4);
+  background-color: transparent;
   border-bottom-left-radius: 9px;
   border-bottom-right-radius: 9px;
 }

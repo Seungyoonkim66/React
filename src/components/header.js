@@ -50,11 +50,11 @@ class Header extends Component {
         return (
             <div className="header" style={this.state.header_full_style}>
                 <div className="logo">
-                    <img style={this.state.logo_img_style} src={logo} alt="logo" />
+                    <a href="http://localhost:3000/"><img style={this.state.logo_img_style} src={logo} alt="logo" /></a>
                 </div>
                 <div className="logotext" style={this.state.logo_text_style}>
-                    <p style={this.state.p1_style}>LIGHTHOUSETEST KOREA</p>
-                    <p style={this.state.p2_style}> | OCR Digitalization</p>
+                    <a href="https://home.kpmg/kr/ko/home.html"><p style={this.state.p1_style}>LIGHTHOUSETEST KOREA</p></a>
+                    <a href="http://localhost:3000/"><p style={this.state.p2_style}> | OCR Digitalization</p></a>
                 </div>
             </div>
         );

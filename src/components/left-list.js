@@ -6,7 +6,7 @@ class LeftList extends Component {
     render() {
         return (
             <div>
-                <Contents/>
+                <Contents />
             </div>
         );
     }

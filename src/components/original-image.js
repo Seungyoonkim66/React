@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class OriginalImage extends Component {
 
     render() {
-        console.log('OriginalImage-render');
         return (
             <div className="contents_div">
                 <div className="label">ORIGINAL IMAGE</div>
