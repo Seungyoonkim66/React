@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import data from "./data.json";
-import clipboard from './clipboard.svg';
-
-function Clipboard () {
-    console.log("clipboard");
-    document.execCommand('copy');
-}
 
 function HandleClick(data_id) {
     console.log("file id:"+data_id);
@@ -57,10 +51,7 @@ function HandleClick(data_id) {
                 <tbody>
                     <tr>
                         <th scope="row" id="총금액">총금액</th>
-                        <td>{cur_data_extract_data[data_id - 1].총금액}
-                            <img style={{float: "right", margin: "0 10px"}} width="20px"alt="clipboard" src={clipboard}
-                                onClick={Clipboard}/>
-                        </td>
+                        <td>{cur_data_extract_data[data_id - 1].총금액}</td>
                     </tr>
                     <tr>
                         <th scope="row">지급기일</th>
